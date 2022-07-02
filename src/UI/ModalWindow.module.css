@@ -1,0 +1,210 @@
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    background: rgba(26, 26, 26, 0.8);
+}
+
+
+.contentBlock {
+    position: absolute;
+    width: 627px;
+    height: 499px;
+    left: 407px;
+    top: 263px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.close_modal {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 563px;
+    top: 32px;
+}
+
+.btn {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    border: 3px solid #303247;
+}
+
+.form_block {
+    /* position: absolute; */
+    width: 499px;
+    height: 371px;
+    left: 64px;
+    top: 64px;
+}
+
+.header {
+    position: absolute;
+    width: 234px;
+    height: 42px;
+    left: 65px;
+    top: 64px;
+
+    font-family: 'Inter'; 
+     font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+
+    color: #303247;
+}
+
+
+.loan_title {
+    position: absolute;
+    width: 227px;
+    height: 24px;
+    left: 64px;
+    top: 138px;
+
+     font-family: 'Inter';
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #303247;
+}
+
+.amount_available {
+    position: absolute;
+width: 250px;
+height: 24px;
+left: 64px;
+top: 194px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #303247;
+
+}
+
+.loan_ends {
+    position: absolute;
+    width: 285px;
+    height: 24px;
+    left: 64px;
+    top: 226px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #303247; 
+}
+
+.investment_text {
+    position: absolute;
+width: 281px;
+height: 36px;
+left: 64px;
+top: 314px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 36px;
+
+color: #303247;
+}
+
+
+.input_investment {
+    display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+padding: 16px 32px;
+gap: 10px;
+
+position: absolute;
+width: 328px;
+height: 56px;
+left: 66px;
+top: 379px;
+
+background: #FFFFFF;
+border: 1px solid rgba(48, 50, 71, 0.1);
+border-radius: 5px;
+}
+
+.sum {
+    width: 52px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #303247;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+.accept_invest_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 32px;
+    gap: 10px;
+    
+    position: absolute;
+    width: 137px;
+    height: 56px;
+    left: 426px;
+    top: 379px;
+    border: none;
+    background: #F7E308;
+    border-radius: 5px;
+}
+
+.text_btn {
+    width: 73px;
+    height: 24px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    
+    color: #303247;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+

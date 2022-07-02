@@ -1,0 +1,105 @@
+.card_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 10px;
+    margin: 20px 0px;
+    position: relative;
+    width: 676px;
+    height: 134px;
+    left: 64px;
+    top: 132px;
+
+    border: 1px solid rgba(48, 50, 71, 0.1);
+    border-radius: 20px;
+}
+
+.card_informations {
+    width: 612px;
+    height: 70px;
+   
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+}
+
+
+.accept_invest_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 32px;
+    gap: 10px;
+
+    position: absolute;
+    width: 137px;
+    height: 56px;
+    left: 507px;
+    top: 46px;
+    border: none;
+    background: #F7E308;
+    border-radius: 5px;
+}
+
+.text_btn {
+    width: 73px;
+    height: 24px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    color: #303247;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.info_block {
+    position: absolute;
+    width: 223px;
+    height: 70px;
+    left: 32px;
+    top: 32px;
+}
+
+.loan_name  {
+    position: absolute;
+    width: 151px;
+    height: 30px;
+    left: 32px;
+    top: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #303247;
+}
+
+.loan_details  {
+    position: absolute;
+    width: 222px;
+    height: 24px;
+    left: 33px;
+    top: 78px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #303247;
+}

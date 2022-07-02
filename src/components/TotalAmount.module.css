@@ -1,0 +1,41 @@
+.total_block {
+    position: absolute;
+    width: 683px;
+    height: 24px;
+    left: 64px;
+    top: 658px;
+
+}
+
+.text {
+    position: absolute;
+    width: 369px;
+    height: 24px;
+    left: 64px;
+    top: 658px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #303247;
+}
+
+.total_amount_text {
+    position: absolute;
+    width: 96px;
+    height: 24px;
+    left: 651px;
+    top: 658px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+
+    color: #303247;
+}

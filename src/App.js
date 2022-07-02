@@ -1,23 +1,57 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Card from './components/Card';
+import TotalAmount from './components/TotalAmount';
+import ModalWindow from './UI/ModalWindow'
 
-function App() {
+function App(props) {
+
+  const [data, setData] = useState(props.data)
+  // console.log(data.loans.available);
+
+  
+
+  const [amount, setAmount] = useState(500000)
+
+
+  // function openModal(data) {
+  //   setStateModal(data)
+ 
+  // }
+
+
+ 
+ 
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='header_block'>
+      <div className='header'>Current Loans</div>
+      </div>
+      <hr className='line'/>
+
+      {/* {stateModal && (
+        // data.loans.map(loan => <ModalWindow available={loan.available}/>)
+        <ModalWindow available={data.available} />
+      )} */}
+
+      {/* <ModalWindow /> */}
+      {data.loans.map(loan => (
+      <Card 
+      tranche={loan.tranche}
+      key={loan.id}
+      amount={loan.amount}
+      available={loan.available}
+      title={loan.title}
+      />) )}
+  
+
+      <TotalAmount total={amount} loans={data.loans}></TotalAmount>
+
+      
+
+ 
+     
     </div>
   );
 }
