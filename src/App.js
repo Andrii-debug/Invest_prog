@@ -2,26 +2,13 @@ import React, {useState} from 'react';
 import './App.css';
 import Card from './components/Card';
 import TotalAmount from './components/TotalAmount';
-import ModalWindow from './UI/ModalWindow'
+
 
 function App(props) {
 
   const [data, setData] = useState(props.data)
-  // console.log(data.loans.available);
-
-  
 
   const [amount, setAmount] = useState(500000)
-
-
-  // function openModal(data) {
-  //   setStateModal(data)
- 
-  // }
-
-
- 
- 
  
   return (
     <div className="App">
@@ -30,12 +17,7 @@ function App(props) {
       </div>
       <hr className='line'/>
 
-      {/* {stateModal && (
-        // data.loans.map(loan => <ModalWindow available={loan.available}/>)
-        <ModalWindow available={data.available} />
-      )} */}
 
-      {/* <ModalWindow /> */}
       {data.loans.map(loan => (
       <Card 
       tranche={loan.tranche}

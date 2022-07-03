@@ -1,20 +1,25 @@
 import React, {useState} from 'react';
 import './Card.css'
 import ModalWindow from '../UI/ModalWindow'
+import Invested from '../UI/Invested';
+
 
 function Card(props) {
 
     const [available, setAvailable] = useState()
     const [stateModal, setStateModal] = useState()
-    
+    const [investedStatus, setInvestedStatus] = useState(false)
 
     function openModalHandler() {
         setStateModal(true)
         
     }
 
+
     function closeModalHandler(data) {
-        setStateModal(data)
+        setStateModal(data.closeModalStatus)
+        setInvestedStatus(data.showInvestmentStatus)
+        
     }
 
   return (
@@ -22,7 +27,7 @@ function Card(props) {
         {stateModal && ( <ModalWindow  sendAvailable={props.available} sendTitle={props.title} closeModalHandler={closeModalHandler}/> )}
     <div className='card_container'>
         <div className='card_informations'>
-          
+            {investedStatus && <Invested  />}
             <div className='info_block'/>
      
             <p className='loan_name'>

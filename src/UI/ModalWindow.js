@@ -21,9 +21,11 @@ function ModalWindow(props) {
 
     function onSubmitHandler(e) {
         e.preventDefault()
-        props.closeModalHandler(false)
-        console.log(getValues);
-       
+        const data = {
+            closeModalStatus: false,
+            showInvestmentStatus: true
+        }
+        props.closeModalHandler(data)      
     }
 
     return (
