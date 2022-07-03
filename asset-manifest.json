@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Invest_prog/static/css/main.9ce472b0.css",
+    "main.js": "/Invest_prog/static/js/main.2c716bd2.js",
+    "index.html": "/Invest_prog/index.html",
+    "main.9ce472b0.css.map": "/Invest_prog/static/css/main.9ce472b0.css.map",
+    "main.2c716bd2.js.map": "/Invest_prog/static/js/main.2c716bd2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ce472b0.css",
+    "static/js/main.2c716bd2.js"
+  ]
+}
