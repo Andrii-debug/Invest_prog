@@ -8,7 +8,7 @@ function App(props) {
 
   const [data, setData] = useState(props.data)
 
-  const [amount, setAmount] = useState(500000)
+  // const [amount, setAmount] = useState(500000)
  
   return (
     <div className="App">
@@ -19,7 +19,8 @@ function App(props) {
 
 
       {data.loans.map(loan => (
-      <Card 
+      <Card
+      remaining={loan.term_remaining}
       tranche={loan.tranche}
       key={loan.id}
       amount={loan.amount}
@@ -28,7 +29,7 @@ function App(props) {
       />) )}
   
 
-      <TotalAmount total={amount} loans={data.loans}></TotalAmount>
+      <TotalAmount  loans={data.loans}></TotalAmount>
 
       
 

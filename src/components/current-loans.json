@@ -4,31 +4,31 @@
       "id": "1",
       "title": "Coca-Cola",
       "tranche": "A",
-      "available": "11959",
+      "available": "11,959",
       "annualised_return": "8.60",
       "term_remaining": "864000",
       "ltv": "48.80",
-      "amount": "85754"
+      "amount": "85,754"
     },
     {
       "id": "5",
       "title": "Nike",
       "tranche": "B",
-      "available": "31405",
+      "available": "31,405",
       "annualised_return": "7.10",
       "term_remaining": "1620000",
       "ltv": "48.80",
-      "amount": "85754"
+      "amount": "85,754"
     },
     {
       "id": "12",
       "title": "Apple",
       "tranche": "C",
-      "available": "12359",
+      "available": "12,359",
       "annualised_return": "4.80",
       "term_remaining": "879000",
       "ltv": "48.80",
-      "amount": "85754"
+      "amount": "85,754"
     }
   ]
 }

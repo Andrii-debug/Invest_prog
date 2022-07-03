@@ -2,13 +2,12 @@ import React, {useState} from 'react';
 import styles from './TotalAmount.module.css'
 
 
-function TotalAmount({loans, total, amount}) {
+function TotalAmount({loans, total}) {
 
-    
+    console.log(22,33 + 13,33);
 
     const invested = loans.reduce((accumulator, loan) => accumulator + parseFloat(loan.amount), 0)
     const [totalInvestment, setTotalInvestment] = useState(invested)
-  
 
     return (
         <React.Fragment>

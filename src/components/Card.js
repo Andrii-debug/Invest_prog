@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './Card.css'
 import ModalWindow from '../UI/ModalWindow'
 import Invested from '../UI/Invested';
@@ -6,25 +6,46 @@ import Invested from '../UI/Invested';
 
 function Card(props) {
 
-    const [available, setAvailable] = useState()
+    const [available, setAvailable] = useState(props.available)
     const [stateModal, setStateModal] = useState()
     const [investedStatus, setInvestedStatus] = useState(false)
+    const [remaining, setRemaining] = useState(props.remaining)
+     
 
     function openModalHandler() {
+        let month = 0
+        let sec = remaining;
+        let min = sec / 60;
+        let hour = min / 60;
+        let day = Math.ceil(hour / 24)
+        for (let i = 0; i < day; i++) {
+            if (day >= 30) {
+                month++
+                day = day - 30
+            }
+        }
+       
+        setRemaining({
+            day: day,
+            month: month
+            
+        })
+        console.log(remaining);
         setStateModal(true)
-        
     }
 
+    
 
     function closeModalHandler(data) {
         setStateModal(data.closeModalStatus)
         setInvestedStatus(data.showInvestmentStatus)
-        
+        setAvailable(data.available)
+        console.log(data.available);
     }
 
   return (
     <React.Fragment>
-        {stateModal && ( <ModalWindow  sendAvailable={props.available} sendTitle={props.title} closeModalHandler={closeModalHandler}/> )}
+        {stateModal && ( <ModalWindow remaining={remaining} sendAvailable={props.available} sendTitle={props.title} closeModalHandler={closeModalHandler}/> )}
     <div className='card_container'>
         <div className='card_informations'>
             {investedStatus && <Invested  />}
@@ -35,7 +56,7 @@ function Card(props) {
             </p>
 
             <p className='loan_details'>
-                  ${props.available}
+                  ${available}
             </p>
             <button className='accept_invest_btn' onClick={openModalHandler}>
                 <div className='text_btn'>INVEST</div>

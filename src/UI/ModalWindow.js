@@ -4,29 +4,45 @@ import styles from './ModalWindow.module.css'
 
 function ModalWindow(props) {
 
-    const [getValues, setGetValues] = useState()
-    
- 
+    const [getValues, setGetValues] = useState(0)
     const [available, setAvailable] = useState(parseFloat(props.sendAvailable))
+    
+   
+
+
 
     function onHandlerInput(e) {
-     setGetValues(e.target.value)  
+     setGetValues(parseFloat(e.target.value))  
         
     }
 
+    
+
     function calculateAvailable() {
-       setAvailable(props.sendAvailable - getValues)
-     
+       setAvailable(props.sendAvailable - parseFloat(getValues))
+        console.log(available.toFixed(2));
     }
 
     function onSubmitHandler(e) {
         e.preventDefault()
         const data = {
             closeModalStatus: false,
-            showInvestmentStatus: true
+            showInvestmentStatus: true,
+            available: available
         }
         props.closeModalHandler(data)      
     }
+
+
+
+
+    
+       
+
+     
+    
+
+
 
     return (
         <React.Fragment>
@@ -46,7 +62,7 @@ function ModalWindow(props) {
 
                     <div className={styles['amount_available']}>Amount available: ${available}</div>
 
-                    <div className={styles['loan_ends']}>Loan ends in: 1 month 10 days</div>
+                    <div className={styles['loan_ends']}>Loan ends in: {props.remaining.month} month {props.remaining.day} days</div>
 
                     <div className={styles['investment_text']}>Investment amount</div>
                     
