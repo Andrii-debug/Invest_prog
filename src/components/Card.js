@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './Card.css'
 import ModalWindow from '../UI/ModalWindow'
 import Invested from '../UI/Invested';
@@ -50,7 +50,7 @@ function Card(props) {
         {stateModal && ( <ModalWindow remaining={remaining} sendAvailable={available} sendTitle={props.title} closeModalHandler={closeModalHandler}/> )}
     <div className='card_container'>
         <div className='card_informations'>
-            {investedStatus && <Invested  />}
+            {investedStatus && <Invested />}
             <div className='info_block'/>
      
             <p className='loan_name'>

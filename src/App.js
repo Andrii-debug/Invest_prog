@@ -11,10 +11,9 @@ function App(props) {
   const [total, setTotal] = useState(0)
 
   function getTotal(data) {
-    console.log(data);
     setTotal(data)
   }
-  console.log(total);
+ 
   return (
     <div className="App">
       <div className='header_block'>
