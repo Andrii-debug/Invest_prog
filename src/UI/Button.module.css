@@ -1,0 +1,31 @@
+.accept_invest_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 32px;
+    gap: 10px;
+    cursor: pointer;
+    position: absolute;
+    width: 137px;
+    height: 56px;
+    left: 507px;
+    top: 46px;
+    border: none;
+    background: #F7E308;
+    border-radius: 5px;
+}
+
+.text_btn {
+    width: 73px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #303247;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

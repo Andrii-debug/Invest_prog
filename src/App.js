@@ -7,22 +7,21 @@ import TotalAmount from './components/TotalAmount';
 function App(props) {
 
   const [data, setData] = useState(props.data)
-
-  const [total, setTotal] = useState(props.data.total)
   
+  const [total, setTotal] = useState(0)
+
+
   function getTotal(data) {
     setTotal(data)
     console.log(data);
   }
-
+ 
   return (
     <div className="App">
       <div className='header_block'>
       <div className='header'>Current Loans</div>
       </div>
       <hr className='line'/>
-
-
       {data.loans.map(loan => (
       <Card
       remaining={loan.term_remaining}
@@ -32,16 +31,9 @@ function App(props) {
       available={loan.available}
       title={loan.title}
       getTotal={getTotal}
-      data={data.loans}
       />) )}
   
-
-      <TotalAmount total={total} loans={data.loans}></TotalAmount>
-
-      
-
- 
-     
+      <TotalAmount total={total} loans={data.loans}></TotalAmount>    
     </div>
   );
 }
