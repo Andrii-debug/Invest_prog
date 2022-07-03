@@ -11,7 +11,7 @@ function Card(props) {
     const [stateModal, setStateModal] = useState()
     const [investedStatus, setInvestedStatus] = useState(false)
     const [remaining, setRemaining] = useState(props.remaining)
-
+   
     
 
     function openModalHandler() {
@@ -36,18 +36,20 @@ function Card(props) {
         setStateModal(true)
     }
 
-
+  
 
     function closeModalHandler(data) {
         setStateModal(data.closeModalStatus)
         setInvestedStatus(data.showInvestmentStatus)
         setAvailable(data.available)
-        props.getTotal(data.getValues)
+        // props.getTotal(data.getValues)
+        props.getTotal(data.total)
+        console.log(data.total);
     }
 
   return (
     <React.Fragment>
-        {stateModal && ( <ModalWindow remaining={remaining} sendAvailable={available} sendTitle={props.title} closeModalHandler={closeModalHandler}/> )}
+        {stateModal && ( <ModalWindow remaining={remaining} sendAvailable={available} sendTitle={props.title} closeModalHandler={closeModalHandler} data={props.data}/> )}
     <div className='card_container'>
         <div className='card_informations'>
             {investedStatus && <Invested />}

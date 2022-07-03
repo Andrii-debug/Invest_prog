@@ -6,14 +6,20 @@ function ModalWindow(props) {
 
     const [getValues, setGetValues] = useState()
     const [available, setAvailable] = useState(props.sendAvailable)
-   
+    
+
+    const invested = props.data.reduce((accumulator, loan) => accumulator + parseFloat(loan.amount), 0)
+    const [total, setTotal] = useState(invested)
+
+ 
+
     function close() {
       
         const data = {
             closeModalStatus: false,
             showInvestmentStatus: false,
             available: available,
-            getValues: 0
+            // getValues: 0
         }
         props.closeModalHandler(data)
     }
@@ -24,8 +30,8 @@ function ModalWindow(props) {
     }
 
     function calculateAvailable() {
-
        setAvailable(parseFloat(available) - parseFloat(getValues))
+       setTotal(parseFloat(getValues) + parseFloat(total))
     }
 
     function onSubmitHandler(e) {
@@ -37,7 +43,8 @@ function ModalWindow(props) {
             closeModalStatus: false,
             showInvestmentStatus: true,
             available: available,
-            getValues: getValues
+            // getValues: getValues,
+            total: total
         }
         props.closeModalHandler(data)
          

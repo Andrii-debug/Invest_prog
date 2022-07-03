@@ -8,12 +8,13 @@ function App(props) {
 
   const [data, setData] = useState(props.data)
 
-  const [total, setTotal] = useState(0)
-
+  const [total, setTotal] = useState(props.data.total)
+  
   function getTotal(data) {
     setTotal(data)
+    console.log(data);
   }
- 
+
   return (
     <div className="App">
       <div className='header_block'>
@@ -31,6 +32,7 @@ function App(props) {
       available={loan.available}
       title={loan.title}
       getTotal={getTotal}
+      data={data.loans}
       />) )}
   
 
