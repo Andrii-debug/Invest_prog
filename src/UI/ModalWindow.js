@@ -4,46 +4,38 @@ import styles from './ModalWindow.module.css'
 
 function ModalWindow(props) {
 
-    const [getValues, setGetValues] = useState(0)
-    const [available, setAvailable] = useState(parseFloat(props.sendAvailable))
-    
+    const [getValues, setGetValues] = useState('')
+    const [available, setAvailable] = useState(props.sendAvailable)
    
-
-
-
+    
+    
     function onHandlerInput(e) {
-     setGetValues(parseFloat(e.target.value))  
-        
+     setGetValues(e.target.value)
+
     }
 
-    
-
     function calculateAvailable() {
-       setAvailable(props.sendAvailable - parseFloat(getValues))
-        console.log(available.toFixed(2));
+        if (getValues > available) {
+            return
+        } 
+       setAvailable(parseFloat(available) - parseFloat(getValues))
+        
     }
 
     function onSubmitHandler(e) {
         e.preventDefault()
+        if (getValues > available) {
+            return
+        } 
         const data = {
-            closeModalStatus: false,
+            closeModalStatus: true,
             showInvestmentStatus: true,
-            available: available
+            available: available,
+            getValues: getValues
         }
-        props.closeModalHandler(data)      
+        props.closeModalHandler(data)
+        setGetValues('')    
     }
-
-
-
-
-    
-       
-
-     
-    
-
-
-
     return (
         <React.Fragment>
         <div className={styles['wrapper']}>
@@ -67,13 +59,13 @@ function ModalWindow(props) {
                     <div className={styles['investment_text']}>Investment amount</div>
                     
                     
-                    <input type='number' className={styles['input_investment']} onChange={onHandlerInput} />
+                    <input type='number' className={styles['input_investment']} onChange={onHandlerInput} value={getValues} />
                     
 
                     
                     
                     <button className={styles['accept_invest_btn']} onClick={calculateAvailable}>
-                        <div type='submit' className={styles['text_btn']}>INVEST</div>
+                        <div className={styles['text_btn']}>INVEST</div>
                      </button>
                 </form>
 

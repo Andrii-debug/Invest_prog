@@ -6,11 +6,13 @@ import Invested from '../UI/Invested';
 
 function Card(props) {
 
+  
     const [available, setAvailable] = useState(props.available)
     const [stateModal, setStateModal] = useState()
     const [investedStatus, setInvestedStatus] = useState(false)
     const [remaining, setRemaining] = useState(props.remaining)
-     
+
+    
 
     function openModalHandler() {
         let month = 0
@@ -30,22 +32,22 @@ function Card(props) {
             month: month
             
         })
-        console.log(remaining);
+       
         setStateModal(true)
     }
 
-    
+
 
     function closeModalHandler(data) {
         setStateModal(data.closeModalStatus)
         setInvestedStatus(data.showInvestmentStatus)
         setAvailable(data.available)
-        console.log(data.available);
+        props.getTotal(data.getValues)
     }
 
   return (
     <React.Fragment>
-        {stateModal && ( <ModalWindow remaining={remaining} sendAvailable={props.available} sendTitle={props.title} closeModalHandler={closeModalHandler}/> )}
+        {stateModal && ( <ModalWindow remaining={remaining} sendAvailable={available} sendTitle={props.title} closeModalHandler={closeModalHandler}/> )}
     <div className='card_container'>
         <div className='card_informations'>
             {investedStatus && <Invested  />}

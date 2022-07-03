@@ -2,18 +2,15 @@ import React, {useState} from 'react';
 import styles from './TotalAmount.module.css'
 
 
-function TotalAmount({loans, total}) {
+function TotalAmount(props) {
 
-    console.log(22,33 + 13,33);
-
-    const invested = loans.reduce((accumulator, loan) => accumulator + parseFloat(loan.amount), 0)
-    const [totalInvestment, setTotalInvestment] = useState(invested)
+    const invested = props.loans.reduce((accumulator, loan) => accumulator + parseFloat(loan.amount), 0)
 
     return (
         <React.Fragment>
         <div className={styles['total_block']}> </div>
             <p className={styles.text}>Total amount available for investment:</p>
-            <p className={styles['total_amount_text']}>${totalInvestment}</p>
+            <p className={styles['total_amount_text']}>${invested + parseFloat(props.total)}</p>
         </React.Fragment>
     )
 }
