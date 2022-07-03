@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Invest_prog/static/css/main.964d9dde.css",
+    "main.css": "/Invest_prog/static/css/main.37ec22ba.css",
     "main.js": "/Invest_prog/static/js/main.4fa2445b.js",
     "index.html": "/Invest_prog/index.html",
-    "main.964d9dde.css.map": "/Invest_prog/static/css/main.964d9dde.css.map",
+    "main.37ec22ba.css.map": "/Invest_prog/static/css/main.37ec22ba.css.map",
     "main.4fa2445b.js.map": "/Invest_prog/static/js/main.4fa2445b.js.map"
   },
   "entrypoints": [
-    "static/css/main.964d9dde.css",
+    "static/css/main.37ec22ba.css",
     "static/js/main.4fa2445b.js"
   ]
 }
